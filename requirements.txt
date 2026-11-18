@@ -1,0 +1,11 @@
+# Python >= 3.10. Tested with torch 2.x, transformers 4.56-5.x, peft 0.17.
+torch>=2.1
+transformers>=4.56   # 4.56 is the first release with the Apertus architecture (reference model)
+peft>=0.13
+datasets>=2.19
+accelerate>=0.30
+huggingface_hub>=0.24
+sacrebleu>=2.4
+tqdm
+# Optional, for merging full models (scripts/merge_full.sh):
+# mergekit

@@ -1,0 +1,15 @@
+# Merge^{da+is} (360M): two-model TIES merge of Danish + Icelandic only.
+# Matches jekunz/smollm360m-da1-is1-ties.
+merge_method: ties
+models:
+  - model: jekunz/smollm-360m-cpt-fineweb-danish
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: jekunz/smollm-360m-cpt-fineweb-icelandic
+    parameters:
+      weight: 1.0
+      density: 0.5
+
+base_model: HuggingFaceTB/SmolLM2-360M-Instruct
+dtype: bfloat16

@@ -1,0 +1,27 @@
+# Merge^{is+} (135M): Icelandic-biased TIES merge (Icelandic weight 1, others 0.5).
+# Matches jekunz/smollm135m-da05-is1-nno05-nob05-sv05-ties.
+merge_method: ties
+models:
+  - model: jekunz/smollm-135m-cpt-fineweb-danish
+    parameters:
+      weight: 0.5
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-icelandic
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-norwegian-nynorsk
+    parameters:
+      weight: 0.5
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-norwegian-bokmaal
+    parameters:
+      weight: 0.5
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-swedish
+    parameters:
+      weight: 0.5
+      density: 0.5
+
+base_model: HuggingFaceTB/SmolLM2-135M-Instruct
+dtype: bfloat16

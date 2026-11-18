@@ -1,0 +1,16 @@
+# TIES merge of German + Polish full models for HSB (Upper Sorbian)
+# Merges the two most linguistically relevant source languages
+
+merge_method: ties
+models:
+  - model: ${MODELS_DIR}/smollm-360m-full-de
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: ${MODELS_DIR}/smollm-360m-full-pl
+    parameters:
+      weight: 1.0
+      density: 0.5
+
+base_model: HuggingFaceTB/SmolLM2-360M-Instruct
+dtype: bfloat16

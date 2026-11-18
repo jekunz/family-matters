@@ -1,0 +1,24 @@
+# TIES merge of Estonian + Finnish + Norwegian Bokmål + Swedish full models for SE (Northern Sami)
+# Merges all available source languages with equal weights
+
+merge_method: ties
+models:
+  - model: ${MODELS_DIR}/smollm-360m-full-et
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: ${MODELS_DIR}/smollm-360m-full-fi
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: ${MODELS_DIR}/smollm-360m-full-nb
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: ${MODELS_DIR}/smollm-360m-full-sv
+    parameters:
+      weight: 1.0
+      density: 0.5
+
+base_model: HuggingFaceTB/SmolLM2-360M-Instruct
+dtype: bfloat16

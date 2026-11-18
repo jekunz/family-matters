@@ -1,0 +1,28 @@
+# Merge^eq (135M): equal-weight TIES merge of all 5 Scandinavian transfer languages.
+# Matches jekunz/smollm135m-da1-is1-nno1-nob1-sv1-ties (weights recovered from the
+# existing HF repo name; this config lets it be rebuilt if needed).
+merge_method: ties
+models:
+  - model: jekunz/smollm-135m-cpt-fineweb-danish
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-icelandic
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-norwegian-nynorsk
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-norwegian-bokmaal
+    parameters:
+      weight: 1.0
+      density: 0.5
+  - model: jekunz/smollm-135m-cpt-fineweb-swedish
+    parameters:
+      weight: 1.0
+      density: 0.5
+
+base_model: HuggingFaceTB/SmolLM2-135M-Instruct
+dtype: bfloat16
